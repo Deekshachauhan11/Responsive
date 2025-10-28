@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    padding: 1.5rem;
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        .left{
+            display: flex;
+        }
+        .right {
+            h5{
+                display: none;
+                font-size: 0.9rem;
+            }
+            i{
+                display: block;
+            }
+        }
+    }
+
+    .section1{
+        height: 60%;
+        margin-top: 1rem;
+
+        .hero-container{
+            height: 100%;
+            background-image: url(https://i.pinimg.com/1200x/8d/83/b9/8d83b98b0b083becbedc350ef62f22a6.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 1.4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 0.7rem;
+            padding: 2rem 0.7rem;
+            color: #fff;
+            h1{
+                font-size: 2.4rem;
+                line-height: 1;
+            }
+            p{
+                line-height: 1.3;
+                opacity: 0.8;
+                font-size: 0.9rem;
+            }
+            .start-btn{
+                color: black;
+                background-color: #fff;
+                width: fit-content;
+                padding: 0.5rem 1.6rem ;
+                border-radius: 2rem;
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+    main{
+        .navbar{
+            .right{
+                display: flex;
+                gap: 3rem;
+                i{
+                    display: none;
+                }
+                h5{
+                    display: block;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .section1{
+            .hero-container{
+                padding: 4rem 1rem;
+                gap: 0.5rem;
+
+                h1{
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                }
+
+                p{
+                    font-size: 1rem;
+                    opacity: 1;
+                }
+                .start-btn{
+                  padding: 0.8rem 2.7rem ;
+                  font-size: 1.5rem;
+               
+                  font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
