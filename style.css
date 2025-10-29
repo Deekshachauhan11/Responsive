@@ -67,6 +67,21 @@ main .section1 .hero-container .start-btn {
   border-radius: 2rem;
   font-size: 0.5rem;
 }
+main .section2 {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section2 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section2 .bottom {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (min-width: 600px) {
   main .navbar .right {
