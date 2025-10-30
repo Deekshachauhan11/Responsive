@@ -1,139 +1,217 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-@mixin flexCenter($gap:0rem){
+@mixin flexCenter($gap: 0rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+main {
+  min-height: 100%;
+  padding: 1.5rem; 
+
+  p{
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    line-height: 1.4;
+  }
+
+  .navbar {
     display: flex;
-    flex-direction: column;
-    gap: $gap;
-}
+    justify-content: space-between;
+    padding: 0 1rem;
+    .left {
+      display: flex;
+    }
+    .right {
+      h5 {
+        display: none;
+        font-size: 0.89rem;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+      }
+      i {
+        display: block;
+      }
+    }
+  }
 
-main{
-    height: 100%;
-    padding: 1.5rem;
+  .section1 {
+    margin-top: 1rem;
 
-    .navbar{
+    .hero-container {
+      height: calc(100vh - 6rem);
+      background-image: url(https://i.pinimg.com/1200x/8d/83/b9/8d83b98b0b083becbedc350ef62f22a6.jpg);
+      background-size: cover;
+      background-position: center;
+      border-radius: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 0.7rem;
+      padding: 2rem 0.7rem;
+      color: #fff;
+      h1 {
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+      p {
+        opacity: 0.8;
+      }
+      .start-btn {
+        color: black;
+        background-color: #fff;
+        width: fit-content;
+        padding: 0.5rem 1.6rem;
+        border-radius: 2rem;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  .section2 {
+    margin-top: 2rem;
+    @include flexCenter(2rem);
+    .top {
+      @include flexCenter(1rem);
+    }
+    .bottom {
+      @include flexCenter(1rem);
+      .top-bottom {
         display: flex;
-        justify-content: space-between;
-        padding: 0 1rem;
-        .left{
-            display: flex;
-        }
-        .right {
-            h5{
-                display: none;
-                font-size: 0.89rem;
-                font-weight: 100;
-                letter-spacing: 0.5px;
-            }
-            i{
-                display: block;
-            }
-        }
+        gap: 4rem;
+      }
     }
-
-    .section1{
-        height: 90%;
-        margin-top: 1rem;
-
-        .hero-container{
-            height: 100%;
-            background-image: url(https://i.pinimg.com/1200x/8d/83/b9/8d83b98b0b083becbedc350ef62f22a6.jpg);
-            background-size: cover;
-            background-position: center;
-            border-radius: 1.4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            gap: 0.7rem;
-            padding: 2rem 0.7rem;
-            color: #fff;
-            h1{
-                font-size: 2.4rem;
-                line-height: 1;
-            }
-            p{
-                line-height: 1.3;
-                opacity: 0.8;
-                font-size: 0.9rem;
-            }
-            .start-btn{
-                color: black;
-                background-color: #fff;
-                width: fit-content;
-                padding: 0.5rem 1.6rem ;
-                border-radius: 2rem;
-                font-size: 0.5rem;
-            }
-        }
-    }
-
-    .section2{
-        margin-top: 2rem;
-        @include flexCenter(1rem);
-        .top{
-           @include flexCenter(1rem)
-        }
-        .bottom{
-            display: flex;
-            justify-content: space-between;
-            
-        }
-    }
+  }
 }
 
+.section3 {
+  width: 100%;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  .bottom {
+    @include flexCenter(0.6rem);
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
 
-
-
-
-
+    .imgs {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      gap: 1rem;
+      .img {
+        flex: 0 0 40%;
+        overflow: hidden;
+        @include flexCenter(0.7rem);
+        
+        img {
+          width: 100%;
+          border-radius: 1rem;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 600px) {
-    main{
-        .navbar{
-            .right{
-                display: flex;
-                gap: 3rem;
-                i{
-                    display: none;
-                }
-                h5{
-                    display: block;
-                    text-transform: uppercase;
-                }
-            }
+  main {
+    .navbar {
+      .right {
+        display: flex;
+        gap: 3rem;
+        i {
+          display: none;
         }
-
-        .section1{
-            .hero-container{
-                padding: 4rem 2rem;
-                gap: 1rem;
-                background-position: top;
-
-                h1{
-                    font-size: 6rem;
-                    text-transform: uppercase;
-                }
-
-                p{
-                    font-size: 1.1rem;
-                    opacity: 1;
-                }
-                .start-btn{
-                  padding: 0.9rem 2.7rem ;
-                  font-size: 1.5rem;
-               
-                  font-size: 0.9rem;
-                }
-            }
+        h5 {
+          display: block;
+          text-transform: uppercase;
         }
+      }
     }
+
+    .section1 {
+      .hero-container {
+        padding: 4rem 2rem;
+        gap: 1rem;
+        background-position: top;
+
+        h1 {
+          font-size: 6rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 1.1rem;
+          opacity: 1;
+        }
+        .start-btn {
+          padding: 0.9rem 2.7rem;
+          font-size: 1.5rem;
+
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .section2 {
+      align-items: center;
+      flex-direction: row;
+      .top,
+      .bottom {
+        width: 50%;
+      }
+      .bottom {
+        align-items: end;
+        gap: 2rem;
+        .top-bottom {
+          gap: 10rem;
+
+          h1 {
+            font-size: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section3 {
+    padding: 1.5rem;
+    .bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      .text {
+        width: 25%;
+
+        h2{
+            font-size: 4rem;
+        }
+      }
+      .imgs {
+        width: 60%;
+        gap: 2rem;
+        overflow: visible;
+        overflow-x: visible;
+        .img {
+          flex: 0 0 30%;
+        }
+      }
+    }
+  }
 }

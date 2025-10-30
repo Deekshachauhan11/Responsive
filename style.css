@@ -12,8 +12,13 @@ body {
 }
 
 main {
-  height: 100%;
+  min-height: 100%;
   padding: 1.5rem;
+}
+main p {
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
 }
 main .navbar {
   display: flex;
@@ -33,11 +38,10 @@ main .navbar .right i {
   display: block;
 }
 main .section1 {
-  height: 90%;
   margin-top: 1rem;
 }
 main .section1 .hero-container {
-  height: 100%;
+  height: calc(100vh - 6rem);
   background-image: url(https://i.pinimg.com/1200x/8d/83/b9/8d83b98b0b083becbedc350ef62f22a6.jpg);
   background-size: cover;
   background-position: center;
@@ -54,9 +58,7 @@ main .section1 .hero-container h1 {
   line-height: 1;
 }
 main .section1 .hero-container p {
-  line-height: 1.3;
   opacity: 0.8;
-  font-size: 0.9rem;
 }
 main .section1 .hero-container .start-btn {
   color: black;
@@ -71,7 +73,7 @@ main .section2 {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 main .section2 .top {
   display: flex;
@@ -80,7 +82,50 @@ main .section2 .top {
 }
 main .section2 .bottom {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section2 .bottom .top-bottom {
+  display: flex;
+  gap: 4rem;
+}
+
+.section3 {
+  width: 100%;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.section3 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.section3 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.section3 .bottom .imgs {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}
+.section3 .bottom .imgs::-webkit-scrollbar {
+  display: none;
+}
+.section3 .bottom .imgs .img {
+  flex: 0 0 40%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.section3 .bottom .imgs .img img {
+  width: 100%;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 600px) {
@@ -112,5 +157,45 @@ main .section2 .bottom {
     padding: 0.9rem 2.7rem;
     font-size: 1.5rem;
     font-size: 0.9rem;
+  }
+  main .section2 {
+    align-items: center;
+    flex-direction: row;
+  }
+  main .section2 .top,
+  main .section2 .bottom {
+    width: 50%;
+  }
+  main .section2 .bottom {
+    align-items: end;
+    gap: 2rem;
+  }
+  main .section2 .bottom .top-bottom {
+    gap: 10rem;
+  }
+  main .section2 .bottom .top-bottom h1 {
+    font-size: 2.8rem;
+  }
+  .section3 {
+    padding: 1.5rem;
+  }
+  .section3 .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .section3 .bottom .text {
+    width: 25%;
+  }
+  .section3 .bottom .text h2 {
+    font-size: 4rem;
+  }
+  .section3 .bottom .imgs {
+    width: 60%;
+    gap: 2rem;
+    overflow: visible;
+    overflow-x: visible;
+  }
+  .section3 .bottom .imgs .img {
+    flex: 0 0 30%;
   }
 }/*# sourceMappingURL=style.css.map */
