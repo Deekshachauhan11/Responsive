@@ -262,4 +262,7 @@ main .section2 .bottom .top-bottom {
     flex-direction: row;
     justify-content: space-between;
   }
+  .section4 .top-right {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
