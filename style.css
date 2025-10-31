@@ -16,14 +16,13 @@ main {
   padding: 1.5rem;
 }
 main p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.6px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 main .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 main .navbar .left {
   display: flex;
@@ -41,7 +40,7 @@ main .section1 {
   margin-top: 1rem;
 }
 main .section1 .hero-container {
-  height: calc(100vh - 6rem);
+  height: calc(80vh - 6rem);
   background-image: url(https://i.pinimg.com/1200x/8d/83/b9/8d83b98b0b083becbedc350ef62f22a6.jpg);
   background-size: cover;
   background-position: center;
@@ -95,6 +94,11 @@ main .section2 .bottom .top-bottom {
   margin-top: 1rem;
   padding-left: 1.5rem;
 }
+.section3 p {
+  font-size: 0.8rem;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
+}
 .section3 .bottom {
   display: flex;
   flex-direction: column;
@@ -126,6 +130,62 @@ main .section2 .bottom .top-bottom {
   border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.section4 {
+  margin: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section4 p {
+  font-size: 0.8rem;
+  letter-spacing: 0.6px;
+  line-height: 1.4;
+}
+.section4 .topp {
+  display: flex;
+  gap: 0.6rem;
+}
+.section4 .topp .top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.section4 .topp .top-right {
+  background-color: #79ABCB;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+.section4 .bottoms {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section4 .bottoms .bottom {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid rgb(219, 219, 219);
+  padding-bottom: 0.7rem;
+}
+.section4 .bottoms .bottom i {
+  background-color: black;
+  border-radius: 50%;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.4rem;
+}
+.section4 .bottoms .bottom .head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: -0.4rem;
+}
+.section4 .bottoms .bottom .head p {
+  font-size: 0.8rem;
 }
 
 @media (min-width: 600px) {
@@ -197,5 +257,9 @@ main .section2 .bottom .top-bottom {
   }
   .section3 .bottom .imgs .img {
     flex: 0 0 30%;
+  }
+  .section4 {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */
